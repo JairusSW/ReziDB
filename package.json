@@ -1,0 +1,25 @@
+{
+  "name": "rezidb",
+  "version": "1.0.0",
+  "description": "ReziDB LevelDB Database",
+  "main": "index.js",
+  "keywords": [
+    "level",
+    "rezidb"
+  ],
+  "author": "JairusSW",
+  "license": "MIT",
+  "dependencies": {
+    "benny": "^3.6.15",
+    "bitray": "^2.1.1",
+    "buffer": "^6.0.3",
+    "encoding-down": "^6.3.0",
+    "get-stream": "^6.0.0",
+    "into-stream": "^6.0.0",
+    "level": "^6.0.1",
+    "level-codec": "^9.0.2",
+    "level-party": "^4.0.0",
+    "lodash": "^4.17.20",
+    "on-change": "^2.2.3"
+  }
+}
