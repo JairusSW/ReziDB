@@ -1,5 +1,10 @@
 # ReziDB
+
+![npm](https://img.shields.io/npm/dt/rezidb?style=flat-square) ![npm](https://img.shields.io/npm/v/rezidb?style=flat-square) ![NPM](https://img.shields.io/npm/l/rezidb?style=flat-square)
+
 **An Mighty Database Based On LevelDB**
+
+[![NPM](https://nodei.co/npm/rezidb.png?downloads=true&downloadRank=true&stars=true&compact=true)](https://nodei.co/npm/air5/)
 
 ## Features
 - Sharding Support
@@ -7,6 +12,8 @@
 - Works In Multiple Processes
 - Small and Fast
 - Works With Buffers
+- IPC Clustering
+- Cache support
 
 ## Installation
 
@@ -16,13 +23,15 @@
 
 ## Usage
 
+**Basic Usage**
 ```js
 const ReziDB = require('rezidb')
 
 const db = new ReziDB({
     name: 'Test',
     path: './data',
-    cluster: false
+    cluster: false,
+    cache: true
 })
 
 await db.set('Hello', 'World 🌎')
@@ -34,9 +43,14 @@ console.log('Data: ', await db.toJSON())
 
 ## API
 
-**new ReziDB()**
+**new ReziDB({**
+    **name: string,**
+    **path: string,**
+    **cluster: boolean,**
+    **cache: boolean | { maxSize: number }**
+**})**
 
-Construct a new ReziDB instance. Can Be Clustered.
+Construct a new ReziDB instance. Can Be Clustered. Cache maxSize defaults to 1,000 items
 
 **db.set(key, value, path) -->> null**
 

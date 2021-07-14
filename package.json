@@ -1,7 +1,7 @@
 {
   "name": "rezidb",
-  "version": "1.0.1",
-  "description": "ReziDB LevelDB Database",
+  "version": "2.0.0",
+  "description": "ReziDB - High Performance Clustered Database",
   "main": "index.js",
   "keywords": [
     "level",
@@ -10,18 +10,14 @@
   "author": "JairusSW",
   "license": "MIT",
   "dependencies": {
-    "bitray": "^2.1.1",
-    "buffer": "^6.0.3",
     "get-stream": "^6.0.0",
     "into-stream": "^6.0.0",
-    "level": "^6.0.1",
+    "level": "^7.0.0",
     "level-party": "^4.0.0",
     "lodash": "^4.17.20",
-    "on-change": "^2.2.3"
-  },
-  "devDependencies": {},
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "on-change": "^2.2.3",
+    "quick-lru": "^5.1.1",
+    "rocksdb": "^5.0.0"
   },
   "repository": {
     "type": "git",
@@ -30,5 +26,10 @@
   "bugs": {
     "url": "https://github.com/JairusSW/ReziDB/issues"
   },
-  "homepage": "https://github.com/JairusSW/ReziDB#readme"
+  "homepage": "https://github.com/JairusSW/ReziDB#readme",
+  "devDependencies": {
+    "benchmark": "^2.1.4",
+    "colors": "^1.4.0",
+    "microtime": "^3.0.0"
+  }
 }
